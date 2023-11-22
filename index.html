@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>時間割登録1</title>
+  <title>時間割登録</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
@@ -52,12 +52,7 @@
       const idToken = liff.getDecodedIDToken();
       const userId = idToken.sub;
       $('form').append(`<input type="hidden" name="userId" value="${userId}">`);
-      $('form').append(`<input type="submit" class="mt-4 btn btn-primary" value="送信" onclick="clickDisplayAlert()" >`);
-      <script>
-        function clickDisplayAlert() {
-          alert("送信完了");
-      </script>
-        }
+      $('form').append(`<input type="submit" class="mt-4 btn btn-primary" value="送信" onclick="disabled = true;" >`);
       $('form').append(`<input type="button" class="mt-4 btn btn-primary" onclick="window.close();" value="閉じる">`);
     })
 
