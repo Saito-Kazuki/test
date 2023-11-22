@@ -51,13 +51,12 @@
       const idToken = liff.getDecodedIDToken();
       const userId = idToken.sub;
       $('form').append(`<input type="hidden" name="userId" value="${userId}">`);
-      $('form').append(`<input type="submit" class="mt-4 btn btn-primary" value="送信">`);
+      $('form').append(`<input type="submit" class="mt-4 btn btn-primary" value="送信" onClick="送信用関数();window.close()">`);
     })
 
     $('form').submit(function( event ) {
       event.preventDefault();
-  　　$.post( 'https://script.google.com/macros/s/AKfycbxLSwwEEY9McH6oVcTsnRhCMcD13tTZ6biwYSIJHvrIfgXdIuzyVZ24jJIAjcCdRrcB/exec', $('form').serialize() );
-    　return false;
+  　　$.post( 'https://script.google.com/macros/s/AKfycbxLSwwEEY9McH6oVcTsnRhCMcD13tTZ6biwYSIJHvrIfgXdIuzyVZ24jJIAjcCdRrcB/exec', $('form').serialize() )
     });
   </script>
 </body>
